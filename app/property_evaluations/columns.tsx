@@ -5,8 +5,7 @@ import { DataTableColumnHeader } from "./data-table-column-header";
 import { DataTableRowActions } from "./data-table-row-actions";
 
 import { ColumnDef } from "@tanstack/react-table";
-import { TableCell } from "./TableCell";
-import { EditCell } from "./EditCell";
+
 export const columns: ColumnDef<Property>[] = [
   {
     accessorKey: "street",
@@ -92,7 +91,6 @@ export const columns: ColumnDef<Property>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title={"Asking Price"} />
     ),
-    cell: TableCell,
     meta: {
       type: "number",
     },
@@ -102,7 +100,6 @@ export const columns: ColumnDef<Property>[] = [
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title={"Offer Price"} />
     ),
-    cell: TableCell,
     meta: {
       type: "number",
     },
@@ -320,6 +317,6 @@ export const columns: ColumnDef<Property>[] = [
 
   {
     id: "actions",
-    cell: EditCell,
+    cell: ({ row }) => <DataTableRowActions row={row} />,
   },
 ];

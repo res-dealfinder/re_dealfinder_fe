@@ -4,8 +4,7 @@ import DataTable from "./data-table";
 
 async function getData(): Promise<Property[]> {
   const res = await fetch(
-    // "https://674e465f635bad45618e25a7.mockapi.io/api/propeval/prop"
-    "http://127.0.0.1:8000/dealfinder/properties/"
+    "https://re-dealfinder-bdl4blg57-res-dealfinders-projects.vercel.app/dealfinder/properties/"
   );
   const data = await res.json();
   return data;

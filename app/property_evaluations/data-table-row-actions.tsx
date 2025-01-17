@@ -13,11 +13,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { EditCell } from "./EditCell";
 
 interface DataTableRowActionsProps<TData> {
   row: Row<TData>;
-  onEdit: (value: TData) => void;
 }
 
 export function DataTableRowActions<TData>({
@@ -45,7 +43,7 @@ export function DataTableRowActions<TData>({
             className={"justify-start w-full"}
             asChild
           >
-            <Link href={property.online_link}>
+            <Link href={"#"}>
               <Eye className="w-4 h-4 text-blue-500" />
               {<span className="ml-2">{"View"}</span>}
             </Link>
@@ -59,8 +57,21 @@ export function DataTableRowActions<TData>({
             className={"justify-start w-full"}
             asChild
           >
-            <Pencil className="h-4 w-4 text-green-500" />
-            {<span className="ml-2">{"Edit"}</span>}
+            <Link href={"#"}>
+              <Pencil className="h-4 w-4 text-green-500" />
+              {<span className="ml-2">{"Update"}</span>}
+            </Link>
+          </Button>
+        </DropdownMenuItem>
+
+        <DropdownMenuItem>
+          <Button
+            variant={"ghost"}
+            size={"sm"}
+            className={"justify-start w-full"}
+          >
+            <Trash2 className="h-4 w-4 text-red-500" />
+            {<span className="ml-2">{"Delete"}</span>}
           </Button>
         </DropdownMenuItem>
       </DropdownMenuContent>
