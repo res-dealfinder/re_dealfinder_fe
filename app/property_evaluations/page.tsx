@@ -4,11 +4,12 @@ import DataTable from "./data-table";
 
 async function getData(): Promise<Property[]> {
   const res = await fetch(
-    "https://674e465f635bad45618e25a7.mockapi.io/api/propeval/prop"
-    // "https://re-dealfinder-bdl4blg57-res-dealfinders-projects.vercel.app/dealfinder/properties/"
+    "https://re-dealfinder-be.vercel.app/dealfinder/properties/"
   );
-  const data = await res.json();
-  return data;
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
 }
 
 export default async function PropertyEvaluationsPage() {
