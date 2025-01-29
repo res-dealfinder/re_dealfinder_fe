@@ -11,7 +11,7 @@ import {
   CheckCircle2,
   Star,
 } from "lucide-react";
-import { PropertySearch } from "@/components/property-search";
+import { PropertySearch } from "../components/property-search";
 
 export default function Home() {
   return (
