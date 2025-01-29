@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Search, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
+import { useState } from "react";
+import { Search, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export function PropertySearch() {
-  const [searchValue, setSearchValue] = useState('');
+  const [searchValue, setSearchValue] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle search submission here
-    console.log('Searching for:', searchValue);
+    console.log("Searching for:", searchValue);
   };
 
   return (
@@ -27,8 +27,8 @@ export function PropertySearch() {
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
         />
-        <Button 
-          type="submit" 
+        <Button
+          type="submit"
           size="lg"
           className="absolute right-2 px-3 sm:px-6"
         >
@@ -37,8 +37,13 @@ export function PropertySearch() {
         </Button>
       </div>
       <p className="text-sm text-muted-foreground mt-2 text-center">
-        <span className="sm:hidden">Enter address or paste Zillow/Redfin URL</span>
-        <span className="hidden sm:inline">Example: "123 Main St, New York, NY" or paste a Zillow/Redfin listing URL</span>
+        <span className="sm:hidden">
+          Enter address or paste Zillow/Redfin URL
+        </span>
+        <span className="hidden sm:inline">
+          Example: &ldquo;123 Senter Rd, San Jose, CA&rdquo; or paste a
+          Zillow/Redfin listing URL
+        </span>
       </p>
     </form>
   );

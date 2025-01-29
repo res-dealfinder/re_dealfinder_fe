@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
-  Building2,
   BarChart3,
   Clock,
   DollarSign,
@@ -144,8 +143,8 @@ export default function Home() {
                   ))}
                 </div>
                 <blockquote className="text-muted-foreground relative">
-                  <span className="sr-only">Testimonial quote:</span>"
-                  {testimonial.quote}"
+                  <span className="sr-only">Testimonial quote:</span>
+                  {testimonial.quote}
                 </blockquote>
                 <div
                   className="absolute top-6 right-6 text-primary/10"
@@ -173,7 +172,7 @@ export default function Home() {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-muted-foreground">
-              Choose the plan that's right for you
+              Choose the plan that&apos;s right for you
             </p>
           </div>
 
