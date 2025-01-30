@@ -11,6 +11,7 @@ import {
   Star,
 } from "lucide-react";
 import { PropertySearch } from "../components/property-search";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -112,7 +113,7 @@ export default function Home() {
                 className="p-6 relative transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="flex items-start gap-4 mb-4">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     alt={`${testimonial.name}'s profile picture`}
                     className="w-12 h-12 rounded-full object-cover"
@@ -242,7 +243,7 @@ const testimonials = [
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150&h=150",
     rating: 5,
     quote:
-      "PropAnalyze has transformed how I evaluate properties. The ROI predictions are incredibly accurate, and the market insights have helped me make confident investment decisions.",
+      "DealFinder has transformed how I evaluate properties. The ROI predictions are incredibly accurate, and the market insights have helped me make confident investment decisions.",
   },
   {
     name: "Michael Chen",
@@ -260,7 +261,7 @@ const testimonials = [
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=150&h=150",
     rating: 5,
     quote:
-      "I manage multiple properties, and PropAnalyze has streamlined my entire workflow. The portfolio tracking features are exceptional, and the market insights are invaluable.",
+      "I manage multiple properties, and DealFinder has streamlined my entire workflow. The portfolio tracking features are exceptional, and the market insights are invaluable.",
   },
 ];
 
